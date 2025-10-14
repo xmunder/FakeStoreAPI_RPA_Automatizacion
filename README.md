@@ -203,14 +203,24 @@ El archivo `Data/Config.xlsx` contiene dos hojas: **Settings** y **Constants**. 
   - Verificación de duplicados por ID
   - Inserción de nuevos registros con timestamp
 - **Estructura de tabla** (`productos`):
-  ```sql
-  id INTEGER PRIMARY KEY
-  title TEXT
-  price NUMERIC
-  category TEXT
-  description TEXT
-  fecha_insercion TIMESTAMP
-  ```
+  - `id` - INTEGER PRIMARY KEY (autoincremental)
+  - `fecha_creacion` - TIMESTAMP (valor por defecto: NOW())
+  - `description` - TEXT
+  - `title` - TEXT
+  - `category` - TEXT
+  - `price` - NUMERIC
+
+**Script SQL para crear la tabla**:
+```sql
+CREATE TABLE productos (
+    id SERIAL PRIMARY KEY,
+    fecha_creacion TIMESTAMP DEFAULT NOW(),
+    description TEXT,
+    title TEXT,
+    category TEXT,
+    price NUMERIC
+);
+```
 
 ### 3. **Microsoft Graph API (OneDrive)**
 - **Propósito**: Almacenamiento de reportes Excel en la nube
