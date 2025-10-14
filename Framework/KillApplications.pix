@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
+  <CompilationType>CSharp</CompilationType>
+  <Description>Новый скрипт без наполнения.</Description>
+  <Id>e8907384-f2f6-4dca-9f81-b82a0e74f56a</Id>
+  <Logic z:Id="i2" i:type="ExecutedStep">
+    <Childs>
+      <AbstractStep z:Id="i3" i:type="ExecutedStep">
+        <Childs />
+        <Id>111086e1-a4ae-4e6c-8d07-61c7a6d5a3b6</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i4">
+            <PropertyName>Text</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>"Beginning of forced shutdown of open applications."</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Write the log "Start of forced shutdown of open applications.</Text>
+        <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i5" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i6" i:type="ExecutedStep">
+            <Childs />
+            <Id>2afe86a7-a701-40b9-a7f7-c6398a1d2114</Id>
+            <Parent z:Ref="i5" />
+            <PropertyValues>
+              <PropertyValue z:Id="i7">
+                <PropertyName>CSCode</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">/***************************************************************
+ * SCRIPT: Cerrar procesos (Google Chrome y Excel)
+ * AUTOR: Cristian Camilo Gómez Fernández
+ * FECHA: 2025-10-13
+ * 
+ * DESCRIPCIÓN:
+ * Verifica si los procesos "chrome" o "excel" están activos 
+ * en el sistema y los cierra. 
+ * Primero intenta cerrarlos suavemente y, si no responden,
+ * los finaliza de manera forzada.
+ * 
+ * VARIABLES DE SALIDA:
+ *   ScriptProcessResult : bool    → true si se cerraron correctamente o no estaban activos
+ *   ScriptMessageResult : string  → mensaje final con el resultado
+ ***************************************************************/
+
+// =============================
+// VARIABLES INTERNAS
+// =============================
+bool processResult = true;
+string processMessage = "";
+var procesosCerrados = new System.Collections.Generic.List&lt;string&gt;();
+var procesosNoEncontrados = new System.Collections.Generic.List&lt;string&gt;();
+var errores = new System.Collections.Generic.List&lt;string&gt;();
+
+// Procesos a revisar
+string[] procesosObjetivo = { "chrome", "excel" };
+
+try
+{
+    foreach (string nombreProceso in procesosObjetivo)
+    {
+        try
+        {
+            System.Diagnostics.Process[] procesos = System.Diagnostics.Process.GetProcessesByName(nombreProceso);
+
+            if (procesos.Length == 0)
+            {
+                procesosNoEncontrados.Add(nombreProceso);
+                continue;
+            }
+
+            foreach (System.Diagnostics.Process p in procesos)
+            {
+                try
+                {
+                    string nombre = p.ProcessName;
+                    int id = p.Id;
+
+                    // Intentar cierre suave
+                    if (!p.CloseMainWindow())
+                    {
+                        // Si no tiene ventana principal o no responde, forzar cierre
+                        p.Kill();
+                    }
+                    else
+                    {
+                        // Esperar hasta 3 segundos por el cierre
+                        if (!p.WaitForExit(3000))
+                        {
+                            p.Kill(); // forzar cierre si no se detiene
+                        }
+                    }
+
+                    procesosCerrados.Add(nombre + " (PID: " + id + ")");
+                }
+                catch (System.Exception exProc)
+                {
+                    errores.Add("Error al cerrar proceso " + nombreProceso + ": " + exProc.Message);
+                }
+            }
+        }
+        catch (System.Exception ex)
+        {
+            errores.Add("Error al buscar proceso " + nombreProceso + ": " + ex.Message);
+        }
+    }
+
+    // =============================
+    // GENERAR MENSAJE FINAL
+    // =============================
+    if (errores.Count &gt; 0)
+    {
+        processResult = false;
+        processMessage = "Errores durante el cierre: " + string.Join(", ", errores);
+    }
+    else if (procesosCerrados.Count &gt; 0)
+    {
+        processResult = true;
+        processMessage = "Procesos cerrados correctamente: " + string.Join(", ", procesosCerrados);
+    }
+    else
+    {
+        processResult = true;
+        processMessage = "No se encontraron procesos activos de Chrome o Excel.";
+    }
+}
+catch (System.Exception ex)
+{
+    processResult = false;
+    processMessage = "Error general: " + ex.Message;
+}
+
+// =============================
+// VARIABLES DE SALIDA
+// =============================
+ScriptProcessResult = processResult;
+ScriptMessageResult = processMessage;
+</_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>eb790d04-13d9-42ba-99d7-b7c8096e3b25</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Script C# - Cerrar Procesos Chrome y Excel</Text>
+        <_activityFullName>BR.Core.Base.Container</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i8" i:type="ExecutedStep">
+        <Childs />
+        <Id>41d862a7-7db2-434a-8575-9c591095fc95</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i9">
+            <PropertyName>Text</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>"End of forced shutdown of open applications."</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Write the "End of forced shutdown of open applications" log.</Text>
+        <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+      </AbstractStep>
+    </Childs>
+    <Id>53e2f646-e545-4222-8a0c-22c520c67f49</Id>
+    <Parent i:nil="true" />
+    <PropertyValues />
+    <SelectedOptionId i:nil="true" />
+    <AutoCloseMode>None</AutoCloseMode>
+    <EnableStatus>true</EnableStatus>
+    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+    <RetryCount>-1</RetryCount>
+    <Text></Text>
+    <_activityFullName>BR.Core.Base.Container</_activityFullName>
+  </Logic>
+  <Name>KillApplications.pix</Name>
+  <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <Params />
+  <PlatformVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+    <d2p1:_Build>4</d2p1:_Build>
+    <d2p1:_Major>2</d2p1:_Major>
+    <d2p1:_Minor>27</d2p1:_Minor>
+    <d2p1:_Revision>0</d2p1:_Revision>
+  </PlatformVersion>
+  <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
+  <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params">
+    <d2p1:Variable z:Id="i10">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>ScriptProcessResult</d2p1:Name>
+      <d2p1:TypeString>System.Object</d2p1:TypeString>
+    </d2p1:Variable>
+    <d2p1:Variable z:Id="i11">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>ScriptMessageResult</d2p1:Name>
+      <d2p1:TypeString>System.Object</d2p1:TypeString>
+    </d2p1:Variable>
+  </Variables>
+  <Version i:nil="true" />
+</Script>
