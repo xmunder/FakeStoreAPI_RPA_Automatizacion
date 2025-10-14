@@ -1,0 +1,1457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
+  <CompilationType>CSharp</CompilationType>
+  <Description>Nuevo script vacio.</Description>
+  <Id>b99e371d-b428-44d5-9e4a-8cd25ab74394</Id>
+  <Logic z:Id="i2" i:type="ExecutedStep">
+    <Childs>
+      <AbstractStep z:Id="i3" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i4" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i5" i:type="ExecutedStep">
+                <Childs />
+                <Id>1bd3b08d-6c3c-4684-ab9a-2cf937803c77</Id>
+                <Parent z:Ref="i4" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i6">
+                    <PropertyName>Browser</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>WebBrowser</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i7">
+                    <PropertyName>SearchString</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"input_5"</_expression>
+                    <_screenShotBase64>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</_screenShotBase64>
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i8">
+                    <PropertyName>IsProgrammatic</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://www.w3.org/2001/XMLSchema" i:type="d11p1:boolean">false</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Clic Input - Nombre Colaborador</Text>
+                <_activityFullName>Activities.Web.ClickElement</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i9" i:type="ExecutedStep">
+                <Childs />
+                <Id>cfc93fb6-0895-45df-b497-2b9f4ce3b363</Id>
+                <Parent z:Ref="i4" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i10">
+                    <PropertyName>Keys</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>Config["CollaboratorName"].ToString()</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i11">
+                    <PropertyName>ValueCheck</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://www.w3.org/2001/XMLSchema" i:type="d11p1:boolean">true</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i12">
+                    <PropertyName>SearchString</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"input_5"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i13">
+                    <PropertyName>Browser</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>WebBrowser</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Insertar Valor - Nombre Colaborador</Text>
+                <_activityFullName>Activities.Web.SendKeysInElement</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>ac9793c5-865e-4938-bb73-044e553bfd45</Id>
+            <Parent z:Ref="i3" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Try</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i14" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i15" i:type="ExecutedStep">
+                <Childs />
+                <Id>a1703d43-5766-40d5-aa2b-56e355bac2c8</Id>
+                <Parent z:Ref="i14" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i16">
+                    <PropertyName>CSCode</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://www.w3.org/2001/XMLSchema" i:type="d11p1:string">string collaboratorName = Config["CollaboratorName"].ToString();
+
+// === CREAR EL SCRIPT JAVASCRIPT DINÁMICO ===
+jsScript =
+    "const input = document.querySelector('#input_5');" +
+    "if (input) {" +
+        "input.click();" +
+        "input.value = '';" +
+        "input.value = '" + collaboratorName.Replace("'", "\\'") + "';" +
+        "input.dispatchEvent(new Event('input', { bubbles: true }));" +
+        "input.dispatchEvent(new Event('change', { bubbles: true }));" +
+    "} else {" +
+        "console.error('No se encontró el elemento con el selector #input_5');" +
+    "}";</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i17" i:type="ExecutedStep">
+                <Childs />
+                <Id>9eca085a-4cf2-400e-89c0-aac93187aaa5</Id>
+                <Parent z:Ref="i14" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i18">
+                    <PropertyName>JSCode</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>jsScript</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i19">
+                    <PropertyName>Browser</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>WebBrowser</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Web.ExecuteJSCode</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>7d3373d2-4eb3-428f-93dc-75bdd6a4e536</Id>
+            <Parent z:Ref="i3" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Fix</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>593d38f2-3662-4b32-b857-d83ee0dd6c7f</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i20">
+            <PropertyName>StartWithErrorStep</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_screenShotBase64 i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:boolean">false</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i21">
+            <PropertyName>Counter</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>2</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Try/Fix - Clic y escribir en campo Nombre Colaborador</Text>
+        <_activityFullName>BR.Core.Base.TryFix</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i22" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i23" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i24" i:type="ExecutedStep">
+                <Childs />
+                <Id>20c5ffaf-ae6f-449e-bb1b-8bda46e2dc16</Id>
+                <Parent z:Ref="i23" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i25">
+                    <PropertyName>Browser</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>WebBrowser</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i26">
+                    <PropertyName>SearchString</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"lite_mode_6"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i27">
+                    <PropertyName>IsProgrammatic</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://www.w3.org/2001/XMLSchema" i:type="d11p1:boolean">false</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Clic Input - Fecha</Text>
+                <_activityFullName>Activities.Web.ClickElement</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i28" i:type="ExecutedStep">
+                <Childs />
+                <Id>80fad420-9a98-418d-8e45-c23625708c35</Id>
+                <Parent z:Ref="i23" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i29">
+                    <PropertyName>Keys</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>DateTime.Now.ToString("dd/MM/yyyy")</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i30">
+                    <PropertyName>SearchString</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"lite_mode_6"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i31">
+                    <PropertyName>Browser</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>WebBrowser</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Insertar Valor - Fecha</Text>
+                <_activityFullName>Activities.Web.SendKeysInElement</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>6d1296dd-d1b0-4be0-9766-37de7c073866</Id>
+            <Parent z:Ref="i22" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Try</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i32" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i33" i:type="ExecutedStep">
+                <Childs />
+                <Id>56fdbca9-eac2-4e23-9e03-f4ccd9d82704</Id>
+                <Parent z:Ref="i32" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i34">
+                    <PropertyName>CSCode</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://www.w3.org/2001/XMLSchema" i:type="d11p1:string">string Date = DateTime.Now.ToString("dd/MM/yyyy");
+
+// === CREAR EL SCRIPT JAVASCRIPT DINÁMICO ===
+jsScript =
+    "const input = document.querySelector('#lite_mode_6');" +
+    "if (input) {" +
+        // --- Desplazar la vista hasta el elemento ---
+        "input.scrollIntoView({ behavior: 'smooth', block: 'center' });" +
+
+        // --- Activar el campo ---
+        "input.focus();" +
+        "input.click();" +
+
+        // --- Limpiar y escribir la fecha actual ---
+        "input.value = '';" +
+        "input.value = '" + Date + "';" +
+
+        // --- Disparar eventos para notificar el cambio ---
+        "input.dispatchEvent(new Event('input', { bubbles: true }));" +
+        "input.dispatchEvent(new Event('change', { bubbles: true }));" +
+    "} else {" +
+        "console.error('No se encontró el elemento con el selector #lite_mode_6 (Campo de fecha)');" +
+    "}";
+</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i35" i:type="ExecutedStep">
+                <Childs />
+                <Id>c2922a01-3c0e-4f5b-9d39-a8945480ec78</Id>
+                <Parent z:Ref="i32" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i36">
+                    <PropertyName>JSCode</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>jsScript</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i37">
+                    <PropertyName>Browser</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>WebBrowser</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Web.ExecuteJSCode</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>98e357ac-ed44-46f5-abb0-515ef25e5975</Id>
+            <Parent z:Ref="i22" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Fix</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>1ae84bc1-f6cb-478a-81ff-925da6e38994</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i38">
+            <PropertyName>StartWithErrorStep</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_screenShotBase64 i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:boolean">false</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i39">
+            <PropertyName>Counter</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>2</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Try/Fix - Click y escrbir en campo Fecha</Text>
+        <_activityFullName>BR.Core.Base.TryFix</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i40" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i41" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i42" i:type="ExecutedStep">
+                <Childs />
+                <Id>d4f8584f-ac48-4e8b-a451-b2a5f9bbfbd8</Id>
+                <Parent z:Ref="i41" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i43">
+                    <PropertyName>Browser</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>WebBrowser</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i44">
+                    <PropertyName>SearchString</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"input_7"</_expression>
+                    <_screenShotBase64>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V3j/AOCqP/ys8M+x/Gr/AKCH/kGyo+x/Gr/oIf8AkGyr3Oij+zcD/wA+5f8Ag/E//Lg/tDFd4/8Agqj/APKzwz7H8av+gh/5Bsqk8C/EfxPpfjPUdB8XXP2qeLysL5USeXlS5wYxg8FT36dq9vr5z8S/8l81v/th/wCkorKng8PTzHBQpKUVKc0/3taSaVCrKzU6ko/FFPa91ub/AFqrWweJdTlfLGLVqdOLT9rTV7xhF7Nre2p9GUUUV6h5B4Z+0p/yFPB//b5/6DFXudeGftKf8hTwf/2+f+gxV7nXBgPhxX/X9/8ApjDnoYz4cN/16/8ActYKKKK7zzwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvnPxL/AMl81v8A7Yf+kor6Mr5z8S/8l81v/th/6SiueP8AyNMB/jn/AOo9c7af+54v/BH/ANPUj6MoooroOI8M/aU/5Cng/wD7fP8A0GKvc68M/aU/5Cng/wD7fP8A0GKvc64MB8OK/wCv7/8ATGHPQxnw4b/r1/7lrBRRRXeeeFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAV85+Jf8Akvmt/wDbD/0lFfRlfOfiX/kvmt/9sP8A0lFc8f8AkaYD/HP/ANR6520/9zxf+CP/AKepH0ZRRRXQcR4Z+0p/yFPB/wD2+f8AoMVe514Z+0p/yFPB/wD2+f8AoMVe51wYD4cV/wBf3/6Yw56GM+HDf9ev/ctYKKKK7zzwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvnPxL/wAl81v/ALYf+kor6Mr5z8S/8l81v/th/wCkornj/wAjTAf45/8AqPXO2n/ueL/wR/8AT1I+jKKKK6DiPDP2lP8AkKeD/wDt8/8AQYq9zrwz9pT/AJCng/8A7fP/AEGKvc64MB8OK/6/v/0xhz0MZ8OG/wCvX/uWsFFFFd554UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABXzn4l/5L5rf/AGw/9JRX0ZXzn4l/5L5rf/bD/wBJRXPH/kaYD/HP/wBR6520/wDc8X/gj/6epH0ZRRRXQcR4Z+0p/wAhTwf/ANvn/oMVe514Z+0p/wAhTwf/ANvn/oMVe51wYD4cV/1/f/pjDnoYz4cN/wBev/ctYKKKK7zzwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvnPxL/yXzW/+2H/pKK+jK+c/Ev8AyXzW/wDth/6SiueP/I0wH+Of/qPXO2n/ALni/wDBH/09SPoyiiiug4jwz9pT/kKeD/8At8/9Bir3OvDP2lP+Qp4P/wC3z/0GKvc64MB8OK/6/v8A9MYc9DGfDhv+vX/uWsFFFFd554UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABXzn4l/5L5rf/bD/ANJRX0ZXzn4l/wCS+a3/ANsP/SUVzx/5GmA/xz/9R6520/8Ac8X/AII/+nqR9GUUUV0HEeGftKf8hTwf/wBvn/oMVe514Z+0p/yFPB//AG+f+gxV7nXBgPhxX/X9/wDpjDnoYz4cN/16/wDctYKKKK7zzwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvnPxL/yXzW/+2H/AKSivoyvnPxL/wAl81v/ALYf+kornj/yNMB/jn/6j1ztp/7ni/8ABH/09SPoyiiiug4jwz9pT/kKeD/+3z/0GKvc68M/aU/5Cng//t8/9Bir3OuDAfDiv+v7/wDTGHPQxnw4b/r1/wC5awUUUV3nnhRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFfOfiX/kvmt/9sP/AElFfRlfOfiX/kvmt/8AbD/0lFc8f+RpgP8AHP8A9R6520/9zxf+CP8A6epH0ZRRRXQcR4Z+0p/yFPB//b5/6DFXudeGftKf8hTwf/2+f+gxV7nXBgPhxX/X9/8ApjDnoYz4cN/16/8ActYKKKK7zzwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvnPxL/AMl81v8A7Yf+kor3HWNb8mQ29vJsdWCyzBd+wnoir/FIew7Dk9gfDvEv/JfNb/7Yf+korCKtmeA/xz/9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</_screenShotBase64>
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i45">
+                    <PropertyName>IsProgrammatic</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://www.w3.org/2001/XMLSchema" i:type="d11p1:boolean">false</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Web.ClickElement</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i46" i:type="ExecutedStep">
+                <Childs />
+                <Id>035f4a8f-7f0c-4290-b11a-8e9c18ca7d98</Id>
+                <Parent z:Ref="i41" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i47">
+                    <PropertyName>Keys</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>Config["FormComments"] == null ? "Adjunto Reporte generado el día " + DateTime.Now.ToString("dd/MM/yyyy") : Config["FormComments"].ToString()</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i48">
+                    <PropertyName>SearchString</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"input_7"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i49">
+                    <PropertyName>Browser</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>WebBrowser</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Web.SendKeysInElement</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>2ef1985e-47ce-46ae-a71e-113198a39515</Id>
+            <Parent z:Ref="i40" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Try</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i50" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i51" i:type="ExecutedStep">
+                <Childs />
+                <Id>74b53ef7-9929-4069-ac0c-f356a3b1050e</Id>
+                <Parent z:Ref="i50" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i52">
+                    <PropertyName>CSCode</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://www.w3.org/2001/XMLSchema" i:type="d11p1:string">string Message = "Adjunto Reporte generado el día " + DateTime.Now.ToString("dd/MM/yyyy");
+
+// === CREAR EL SCRIPT JAVASCRIPT DINÁMICO ===
+jsScript =
+    "const input = document.querySelector('#input_7');" +
+    "if (input) {" +
+        // --- Desplazar hasta el elemento para garantizar visibilidad ---
+        "input.scrollIntoView({ behavior: 'smooth', block: 'center' });" +
+
+        // --- Activar el campo ---
+        "input.focus();" +
+        "input.click();" +
+
+        // --- Limpiar y escribir el mensaje dinámico ---
+        "input.value = '';" +
+        "input.value = '" + Message + "';" +
+
+        // --- Disparar eventos para que el cambio sea detectado ---
+        "input.dispatchEvent(new Event('input', { bubbles: true }));" +
+        "input.dispatchEvent(new Event('change', { bubbles: true }));" +
+    "} else {" +
+        "console.error('No se encontró el elemento con el selector #input_7 (Campo de comentarios)');" +
+    "}";
+</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i53" i:type="ExecutedStep">
+                <Childs />
+                <Id>bd7e9845-22c9-42b7-b088-b4f57581f388</Id>
+                <Parent z:Ref="i50" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i54">
+                    <PropertyName>JSCode</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>jsScript</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i55">
+                    <PropertyName>Browser</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>WebBrowser</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Web.ExecuteJSCode</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>78d60a74-821b-440a-9574-d9f49e2d636c</Id>
+            <Parent z:Ref="i40" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Fix</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>f0b68f5b-f394-4e5e-9da8-2c12ffe841d2</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i56">
+            <PropertyName>StartWithErrorStep</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_screenShotBase64 i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:boolean">false</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i57">
+            <PropertyName>Counter</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>2</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Try/Fix - Click y Escribir Comentarios</Text>
+        <_activityFullName>BR.Core.Base.TryFix</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i58" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i59" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i60" i:type="ExecutedStep">
+                <Childs />
+                <Id>4b1ffb6c-75b2-4d00-8a01-50d920b5a3f3</Id>
+                <Parent z:Ref="i59" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i61">
+                    <PropertyName>Browser</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>WebBrowser</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i62">
+                    <PropertyName>SearchString</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"input_8"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i63">
+                    <PropertyName>IsProgrammatic</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://www.w3.org/2001/XMLSchema" i:type="d11p1:boolean">false</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Web.ClickElement</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i64" i:type="ExecutedStep">
+                <Childs />
+                <Id>0279e413-c560-4206-af01-41d8850264b6</Id>
+                <Parent z:Ref="i59" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i65">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>System.IO.Directory.GetCurrentDirectory() + Config["ReportsFolder"].ToString() + @"\" + Config["ExcelReportFileName"].ToString() + DateTime.Now.ToString("yyyy-MM-dd") + ".xlsx"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i66">
+                    <PropertyName>XPath</PropertyName>
+                    <_dataType>XPath</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" z:Id="i67">
+                      <d11p1:Nodes xmlns:d12p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel">
+                        <d12p1:list>
+                          <d11p1:XPathNode z:Id="i68">
+                            <d11p1:AttributeOperators xmlns:d15p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+                            <d11p1:Attributes>
+                              <d12p1:list>
+                                <d11p1:XPathAttribute z:Id="i69">
+                                  <d11p1:IsEnabled>false</d11p1:IsEnabled>
+                                  <d11p1:IsPositionAttribute>true</d11p1:IsPositionAttribute>
+                                  <d11p1:Operator>Equal</d11p1:Operator>
+                                  <d11p1:Value i:nil="true" />
+                                  <d11p1:_isCSharpExpression>false</d11p1:_isCSharpExpression>
+                                  <d11p1:_name></d11p1:_name>
+                                </d11p1:XPathAttribute>
+                              </d12p1:list>
+                            </d11p1:Attributes>
+                            <d11p1:IsEnabled>false</d11p1:IsEnabled>
+                            <d11p1:Name>*</d11p1:Name>
+                          </d11p1:XPathNode>
+                          <d11p1:XPathNode z:Id="i70">
+                            <d11p1:AttributeOperators xmlns:d15p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+                            <d11p1:Attributes>
+                              <d12p1:list>
+                                <d11p1:XPathAttribute z:Id="i71">
+                                  <d11p1:IsEnabled>false</d11p1:IsEnabled>
+                                  <d11p1:IsPositionAttribute>true</d11p1:IsPositionAttribute>
+                                  <d11p1:Operator>Equal</d11p1:Operator>
+                                  <d11p1:Value i:nil="true" />
+                                  <d11p1:_isCSharpExpression>false</d11p1:_isCSharpExpression>
+                                  <d11p1:_name></d11p1:_name>
+                                </d11p1:XPathAttribute>
+                                <d11p1:XPathAttribute z:Id="i72">
+                                  <d11p1:IsEnabled>true</d11p1:IsEnabled>
+                                  <d11p1:IsPositionAttribute>false</d11p1:IsPositionAttribute>
+                                  <d11p1:Operator>Equal</d11p1:Operator>
+                                  <d11p1:Value>'#32770'</d11p1:Value>
+                                  <d11p1:_isCSharpExpression>false</d11p1:_isCSharpExpression>
+                                  <d11p1:_name>ClassName</d11p1:_name>
+                                </d11p1:XPathAttribute>
+                              </d12p1:list>
+                            </d11p1:Attributes>
+                            <d11p1:IsEnabled>true</d11p1:IsEnabled>
+                            <d11p1:Name>Window</d11p1:Name>
+                          </d11p1:XPathNode>
+                          <d11p1:XPathNode z:Id="i73">
+                            <d11p1:AttributeOperators xmlns:d15p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+                            <d11p1:Attributes>
+                              <d12p1:list>
+                                <d11p1:XPathAttribute z:Id="i74">
+                                  <d11p1:IsEnabled>false</d11p1:IsEnabled>
+                                  <d11p1:IsPositionAttribute>true</d11p1:IsPositionAttribute>
+                                  <d11p1:Operator>Equal</d11p1:Operator>
+                                  <d11p1:Value i:nil="true" />
+                                  <d11p1:_isCSharpExpression>false</d11p1:_isCSharpExpression>
+                                  <d11p1:_name></d11p1:_name>
+                                </d11p1:XPathAttribute>
+                              </d12p1:list>
+                            </d11p1:Attributes>
+                            <d11p1:IsEnabled>false</d11p1:IsEnabled>
+                            <d11p1:Name>*</d11p1:Name>
+                          </d11p1:XPathNode>
+                          <d11p1:XPathNode z:Id="i75">
+                            <d11p1:AttributeOperators xmlns:d15p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+                            <d11p1:Attributes>
+                              <d12p1:list>
+                                <d11p1:XPathAttribute z:Id="i76">
+                                  <d11p1:IsEnabled>false</d11p1:IsEnabled>
+                                  <d11p1:IsPositionAttribute>true</d11p1:IsPositionAttribute>
+                                  <d11p1:Operator>Equal</d11p1:Operator>
+                                  <d11p1:Value i:nil="true" />
+                                  <d11p1:_isCSharpExpression>false</d11p1:_isCSharpExpression>
+                                  <d11p1:_name></d11p1:_name>
+                                </d11p1:XPathAttribute>
+                                <d11p1:XPathAttribute z:Id="i77">
+                                  <d11p1:IsEnabled>true</d11p1:IsEnabled>
+                                  <d11p1:IsPositionAttribute>false</d11p1:IsPositionAttribute>
+                                  <d11p1:Operator>Equal</d11p1:Operator>
+                                  <d11p1:Value>'Edit'</d11p1:Value>
+                                  <d11p1:_isCSharpExpression>false</d11p1:_isCSharpExpression>
+                                  <d11p1:_name>ClassName</d11p1:_name>
+                                </d11p1:XPathAttribute>
+                              </d12p1:list>
+                            </d11p1:Attributes>
+                            <d11p1:IsEnabled>true</d11p1:IsEnabled>
+                            <d11p1:Name>Edit</d11p1:Name>
+                          </d11p1:XPathNode>
+                        </d12p1:list>
+                      </d11p1:Nodes>
+                      <d11p1:ScreenShotBase64 i:nil="true" />
+                    </_xpathSettings>
+                  </PropertyValue>
+                  <PropertyValue z:Id="i78">
+                    <PropertyName>SearchTimeout</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>30</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Desktop.EnterTextElement</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i79" i:type="ExecutedStep">
+                <Childs />
+                <Id>7489d9ec-52c3-48bd-8fdf-0798c17299ca</Id>
+                <Parent z:Ref="i59" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i80">
+                    <PropertyName>XPath</PropertyName>
+                    <_dataType>XPath</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" z:Id="i81">
+                      <d11p1:Nodes xmlns:d12p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel">
+                        <d12p1:list>
+                          <d11p1:XPathNode z:Id="i82">
+                            <d11p1:AttributeOperators xmlns:d15p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+                            <d11p1:Attributes>
+                              <d12p1:list>
+                                <d11p1:XPathAttribute z:Id="i83">
+                                  <d11p1:IsEnabled>false</d11p1:IsEnabled>
+                                  <d11p1:IsPositionAttribute>true</d11p1:IsPositionAttribute>
+                                  <d11p1:Operator>Equal</d11p1:Operator>
+                                  <d11p1:Value i:nil="true" />
+                                  <d11p1:_isCSharpExpression>false</d11p1:_isCSharpExpression>
+                                  <d11p1:_name></d11p1:_name>
+                                </d11p1:XPathAttribute>
+                              </d12p1:list>
+                            </d11p1:Attributes>
+                            <d11p1:IsEnabled>false</d11p1:IsEnabled>
+                            <d11p1:Name>*</d11p1:Name>
+                          </d11p1:XPathNode>
+                          <d11p1:XPathNode z:Id="i84">
+                            <d11p1:AttributeOperators xmlns:d15p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+                            <d11p1:Attributes>
+                              <d12p1:list>
+                                <d11p1:XPathAttribute z:Id="i85">
+                                  <d11p1:IsEnabled>false</d11p1:IsEnabled>
+                                  <d11p1:IsPositionAttribute>true</d11p1:IsPositionAttribute>
+                                  <d11p1:Operator>Equal</d11p1:Operator>
+                                  <d11p1:Value i:nil="true" />
+                                  <d11p1:_isCSharpExpression>false</d11p1:_isCSharpExpression>
+                                  <d11p1:_name></d11p1:_name>
+                                </d11p1:XPathAttribute>
+                                <d11p1:XPathAttribute z:Id="i86">
+                                  <d11p1:IsEnabled>true</d11p1:IsEnabled>
+                                  <d11p1:IsPositionAttribute>false</d11p1:IsPositionAttribute>
+                                  <d11p1:Operator>Equal</d11p1:Operator>
+                                  <d11p1:Value>'#32770'</d11p1:Value>
+                                  <d11p1:_isCSharpExpression>false</d11p1:_isCSharpExpression>
+                                  <d11p1:_name>ClassName</d11p1:_name>
+                                </d11p1:XPathAttribute>
+                              </d12p1:list>
+                            </d11p1:Attributes>
+                            <d11p1:IsEnabled>true</d11p1:IsEnabled>
+                            <d11p1:Name>Window</d11p1:Name>
+                          </d11p1:XPathNode>
+                          <d11p1:XPathNode z:Id="i87">
+                            <d11p1:AttributeOperators xmlns:d15p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+                            <d11p1:Attributes>
+                              <d12p1:list>
+                                <d11p1:XPathAttribute z:Id="i88">
+                                  <d11p1:IsEnabled>false</d11p1:IsEnabled>
+                                  <d11p1:IsPositionAttribute>true</d11p1:IsPositionAttribute>
+                                  <d11p1:Operator>Equal</d11p1:Operator>
+                                  <d11p1:Value i:nil="true" />
+                                  <d11p1:_isCSharpExpression>false</d11p1:_isCSharpExpression>
+                                  <d11p1:_name></d11p1:_name>
+                                </d11p1:XPathAttribute>
+                              </d12p1:list>
+                            </d11p1:Attributes>
+                            <d11p1:IsEnabled>false</d11p1:IsEnabled>
+                            <d11p1:Name>*</d11p1:Name>
+                          </d11p1:XPathNode>
+                          <d11p1:XPathNode z:Id="i89">
+                            <d11p1:AttributeOperators xmlns:d15p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+                            <d11p1:Attributes>
+                              <d12p1:list>
+                                <d11p1:XPathAttribute z:Id="i90">
+                                  <d11p1:IsEnabled>false</d11p1:IsEnabled>
+                                  <d11p1:IsPositionAttribute>true</d11p1:IsPositionAttribute>
+                                  <d11p1:Operator>Equal</d11p1:Operator>
+                                  <d11p1:Value i:nil="true" />
+                                  <d11p1:_isCSharpExpression>false</d11p1:_isCSharpExpression>
+                                  <d11p1:_name></d11p1:_name>
+                                </d11p1:XPathAttribute>
+                                <d11p1:XPathAttribute z:Id="i91">
+                                  <d11p1:IsEnabled>true</d11p1:IsEnabled>
+                                  <d11p1:IsPositionAttribute>false</d11p1:IsPositionAttribute>
+                                  <d11p1:Operator>Equal</d11p1:Operator>
+                                  <d11p1:Value>'1'</d11p1:Value>
+                                  <d11p1:_isCSharpExpression>false</d11p1:_isCSharpExpression>
+                                  <d11p1:_name>AutomationId</d11p1:_name>
+                                </d11p1:XPathAttribute>
+                              </d12p1:list>
+                            </d11p1:Attributes>
+                            <d11p1:IsEnabled>true</d11p1:IsEnabled>
+                            <d11p1:Name>Button</d11p1:Name>
+                          </d11p1:XPathNode>
+                        </d12p1:list>
+                      </d11p1:Nodes>
+                      <d11p1:ScreenShotBase64 i:nil="true" />
+                    </_xpathSettings>
+                  </PropertyValue>
+                  <PropertyValue z:Id="i92">
+                    <PropertyName>SearchTimeout</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>30</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>1</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Desktop.ClickElement</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>6c7718df-3e5e-4b04-8311-5fc26cf4ae1c</Id>
+            <Parent z:Ref="i58" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Try</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i93" i:type="ExecutedStep">
+            <Childs />
+            <Id>d6842ba4-cbc6-4623-b1fd-395c6b139a66</Id>
+            <Parent z:Ref="i58" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Catch</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i94" i:type="ExecutedStep">
+            <Childs />
+            <Id>b12524df-a9ad-41d9-8f1d-b9083fd8f804</Id>
+            <Parent z:Ref="i58" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Finally</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>da1d1ceb-0ee6-415f-8acd-c0d235c7ce01</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Try/Catch/Finally - Clic en Adjuntar Archivo</Text>
+        <_activityFullName>BR.Core.Base.TryCatch</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i95" i:type="ExecutedStep">
+        <Childs />
+        <Id>5ea2614f-dc04-4f0c-87cd-4a33529f80e1</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i96">
+            <PropertyName>Count</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>2</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId>0</SelectedOptionId>
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.Sleep</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i97" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i98" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i99" i:type="ExecutedStep">
+                <Childs />
+                <Id>83cb011b-842c-4950-9994-3f0c308bb736</Id>
+                <Parent z:Ref="i98" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i100">
+                    <PropertyName>Browser</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>WebBrowser</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i101">
+                    <PropertyName>SearchString</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"input_2"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i102">
+                    <PropertyName>IsProgrammatic</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://www.w3.org/2001/XMLSchema" i:type="d11p1:boolean">false</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Web.ClickElement</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>c1f5199f-2d27-4e12-b6fb-3b63d4db022a</Id>
+            <Parent z:Ref="i97" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Try</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i103" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i104" i:type="ExecutedStep">
+                <Childs />
+                <Id>b8d2f4da-c3af-4a41-a3cc-b9c77bd04451</Id>
+                <Parent z:Ref="i103" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i105">
+                    <PropertyName>CSCode</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://www.w3.org/2001/XMLSchema" i:type="d11p1:string">// === CREAR EL SCRIPT JAVASCRIPT DINÁMICO ===
+jsScript =
+    "const element = document.querySelector('#input_2');" +
+    "if (element) {" +
+        // --- Desplazar la vista hasta el elemento para garantizar visibilidad ---
+        "element.scrollIntoView({ behavior: 'smooth', block: 'center' });" +
+
+        // --- Activar el elemento con foco y clic ---
+        "element.focus();" +
+        "element.click();" +
+
+        // --- Disparar eventos estándar para compatibilidad con frameworks ---
+        "element.dispatchEvent(new Event('focus', { bubbles: true }));" +
+        "element.dispatchEvent(new Event('click', { bubbles: true }));" +
+    "} else {" +
+        "console.error('No se encontró el elemento con el selector #input_2 (Botón Submit)');" +
+    "}";
+</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i106" i:type="ExecutedStep">
+                <Childs />
+                <Id>00b494a2-794c-443b-a844-346890cd4c07</Id>
+                <Parent z:Ref="i103" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i107">
+                    <PropertyName>JSCode</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>jsScript</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i108">
+                    <PropertyName>Browser</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>WebBrowser</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Web.ExecuteJSCode</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>76454590-69cf-4b45-b765-fc6ae0a634f8</Id>
+            <Parent z:Ref="i97" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Fix</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>997b3f97-6346-439f-a720-d8e78117dee1</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i109">
+            <PropertyName>StartWithErrorStep</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_screenShotBase64 i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:boolean">false</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Try/Fix - Click en Submit</Text>
+        <_activityFullName>BR.Core.Base.TryFix</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i110" i:type="ExecutedStep">
+        <Childs />
+        <Id>4384e642-bb95-4d04-83cd-5e816688b906</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i111">
+            <PropertyName>Count</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>5</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId>0</SelectedOptionId>
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.Sleep</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i112" i:type="ExecutedStep">
+        <Childs />
+        <Id>e6e85e8d-0969-4009-ad99-e2ee4a9a822f</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i113">
+            <PropertyName>Result</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>SuccessUpload</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i114">
+            <PropertyName>SearchBy</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_screenShotBase64 i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/Web.Core" i:type="d7p1:ElementSearchBy">Class</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i115">
+            <PropertyName>SearchString</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>"thankyou-sub-text ty-text"</_expression>
+            <_screenShotBase64>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</_screenShotBase64>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i116">
+            <PropertyName>Browser</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>WebBrowser</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Comprobar si se envio el formulario satisfactoriamente</Text>
+        <_activityFullName>Activities.Web.ElementExist</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i117" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i118" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i119" i:type="ExecutedStep">
+                <Childs />
+                <Id>6a950f23-f05a-42dd-91da-4ed1d86073b1</Id>
+                <Parent z:Ref="i118" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i120">
+                    <PropertyName>FilePath</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>@"Framework\TakeScreenshot.pix"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i121">
+                    <PropertyName>Parameters</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d11p1:ArrayOfArgumentItem">
+                      <d11p1:ArgumentItem z:Id="i122">
+                        <d11p1:ArgumentName>Directory</d11p1:ArgumentName>
+                        <d11p1:Expression>System.IO.Directory.GetCurrentDirectory() + Config["EvidencesFolder"].ToString()
+</d11p1:Expression>
+                        <d11p1:Type>System.String</d11p1:Type>
+                      </d11p1:ArgumentItem>
+                      <d11p1:ArgumentItem z:Id="i123">
+                        <d11p1:ArgumentName>FilePath</d11p1:ArgumentName>
+                        <d11p1:Expression>System.IO.Directory.GetCurrentDirectory() + Config["EvidencesFolder"].ToString() + @"\" + Config["ScreenShotConfirmationFileName"].ToString()</d11p1:Expression>
+                        <d11p1:Type>System.String</d11p1:Type>
+                      </d11p1:ArgumentItem>
+                    </_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i124" i:type="ExecutedStep">
+                <Childs />
+                <Id>ef8a3daf-424f-4d24-a6f4-7d2b4324ed27</Id>
+                <Parent z:Ref="i118" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i125">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Reporte: '" + System.IO.Directory.GetCurrentDirectory() + Config["ReportsFolder"].ToString() + @"\" + Config["ExcelReportFileName"].ToString() + DateTime.Now.ToString("yyyy-MM-dd") + ".xlsx" + "' Enviado Satisfactoriamente"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>1b788604-ff53-4c5d-89ca-c7016621e1c0</Id>
+            <Parent z:Ref="i117" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i126" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i127" i:type="ExecutedStep">
+                <Childs />
+                <Id>ba1c527b-c3bf-452f-a5d3-214149a0605d</Id>
+                <Parent z:Ref="i126" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i128">
+                    <PropertyName>FilePath</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>@"Framework\TakeScreenshot.pix"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i129">
+                    <PropertyName>Parameters</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d11p1:ArrayOfArgumentItem">
+                      <d11p1:ArgumentItem z:Id="i130">
+                        <d11p1:ArgumentName>Directory</d11p1:ArgumentName>
+                        <d11p1:Expression>System.IO.Directory.GetCurrentDirectory() + Config["ExScreenshotsDirectoryPath"].ToString()
+</d11p1:Expression>
+                        <d11p1:Type>System.String</d11p1:Type>
+                      </d11p1:ArgumentItem>
+                      <d11p1:ArgumentItem z:Id="i131">
+                        <d11p1:ArgumentName>FilePath</d11p1:ArgumentName>
+                        <d11p1:Expression>System.IO.Directory.GetCurrentDirectory() + @"\" + Config["ExScreenshotsDirectoryPath"].ToString()+ @"\" + Config["ScreenShotExceptionFileName"].ToString()</d11p1:Expression>
+                        <d11p1:Type>System.String</d11p1:Type>
+                      </d11p1:ArgumentItem>
+                    </_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i132" i:type="ExecutedStep">
+                <Childs />
+                <Id>9e51f041-020f-4f85-94e1-4594f8dbb8e2</Id>
+                <Parent z:Ref="i126" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i133">
+                    <PropertyName>Level</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.Core.Base" i:type="d11p1:LogLevel">Error</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i134">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Reporte: '" + System.IO.Directory.GetCurrentDirectory() + Config["ReportsFolder"].ToString() + @"\" + Config["ExcelReportFileName"].ToString() + DateTime.Now.ToString("yyyy-MM-dd") + ".xlsx" + "' No cargado Satisfactoriamente, Error Adjuntar Archivo"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>a22e01c8-705c-426a-8363-0ff6e6346c2d</Id>
+            <Parent z:Ref="i117" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>830c3bd2-3dbb-46cf-bc74-18ebc7bdbfae</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i135">
+            <PropertyName>Condition</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>SuccessUpload</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>IF - Validar Envio Satisfacotrio del Formulario</Text>
+        <_activityFullName>BR.Core.Base.If</_activityFullName>
+      </AbstractStep>
+    </Childs>
+    <Id>c588c6e4-4199-424d-ac5c-eebaef945406</Id>
+    <Parent i:nil="true" />
+    <PropertyValues />
+    <SelectedOptionId i:nil="true" />
+    <AutoCloseMode>None</AutoCloseMode>
+    <EnableStatus>true</EnableStatus>
+    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+    <RetryCount>-1</RetryCount>
+    <Text></Text>
+    <_activityFullName>BR.Core.Base.Container</_activityFullName>
+  </Logic>
+  <Name>UploadReportToForm.pix</Name>
+  <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <Params>
+    <Parameter z:Id="i136">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>Config</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
+    </Parameter>
+    <Parameter z:Id="i137">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>WebBrowser</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>Web.Core.WebBrowser</TypeString>
+    </Parameter>
+  </Params>
+  <PlatformVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+    <d2p1:_Build>4</d2p1:_Build>
+    <d2p1:_Major>2</d2p1:_Major>
+    <d2p1:_Minor>27</d2p1:_Minor>
+    <d2p1:_Revision>0</d2p1:_Revision>
+  </PlatformVersion>
+  <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
+  <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params">
+    <d2p1:Variable z:Id="i138">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>jsScript</d2p1:Name>
+      <d2p1:TypeString>System.String</d2p1:TypeString>
+    </d2p1:Variable>
+  </Variables>
+  <Version i:nil="true" />
+</Script>

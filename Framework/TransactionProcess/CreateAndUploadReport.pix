@@ -1,0 +1,1447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
+  <CompilationType>CSharp</CompilationType>
+  <Description>Nuevo script vacio.</Description>
+  <Id>b97c2425-321c-4b95-98e3-27f9db92f007</Id>
+  <Logic z:Id="i2" i:type="ExecutedStep">
+    <Childs>
+      <AbstractStep z:Id="i3" i:type="ExecutedStep">
+        <Childs />
+        <Id>cec6d701-aa03-4dd0-b1c2-cc565f7ce67e</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i4">
+            <PropertyName>FileDirectoryPath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>System.IO.Directory.GetCurrentDirectory() + Config["ReportsFolder"].ToString()</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i5">
+            <PropertyName>Result</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>boolIsReportsFolderExist</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>¿Existe la ruta? - Carpeta Reportes</Text>
+        <_activityFullName>Activities.Files.PathExist</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i6" i:type="ExecutedStep">
+        <Childs />
+        <Id>5526fbc4-3e49-45b7-8004-4b42f92c2401</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i7">
+            <PropertyName>Text</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>"La ruta '" + System.IO.Directory.GetCurrentDirectory() + Config["ReportsFolder"].ToString() + "' ¿existe? : " + boolIsReportsFolderExist.ToString()</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i8" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i9" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i10" i:type="ExecutedStep">
+                <Childs />
+                <Id>c68f5111-0623-4b2b-9cf8-bc6f4d1226a9</Id>
+                <Parent z:Ref="i9" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i11">
+                    <PropertyName>NewFolderPath</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>System.IO.Directory.GetCurrentDirectory() + Config["ReportsFolder"].ToString()</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Files.CreateFolder</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i12" i:type="ExecutedStep">
+                <Childs />
+                <Id>d63d18c6-d02a-488c-89ec-d49f6bf1a3fd</Id>
+                <Parent z:Ref="i9" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i13">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"La ruta '" + System.IO.Directory.GetCurrentDirectory() + Config["ReportsFolder"].ToString() + "' ha sido creada" </_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>4d74207f-eedf-4c97-b13b-580261e7b2c7</Id>
+            <Parent z:Ref="i8" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i14" i:type="ExecutedStep">
+            <Childs />
+            <Id>35f81327-7dac-4b55-aa01-dca66838f4e5</Id>
+            <Parent z:Ref="i8" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>a1e9be41-857f-402c-b90f-61246da9db6d</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i15">
+            <PropertyName>Condition</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>!boolIsReportsFolderExist</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>IF - Validar existencia carpeta Reportes</Text>
+        <_activityFullName>BR.Core.Base.If</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i16" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i17" i:type="ExecutedStep">
+            <Childs />
+            <Id>19fd0696-601f-4426-bd22-396e83ffd669</Id>
+            <Parent z:Ref="i16" />
+            <PropertyValues>
+              <PropertyValue z:Id="i18">
+                <PropertyName>CSCode</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">/***************************************************************
+ * SCRIPT: Crear archivo Excel (.xlsx) vacío
+ * AUTOR: Cristian Camilo Gómez Fernández
+ * FECHA: 2025-10-13
+ * 
+ * DESCRIPCIÓN:
+ * Crea un archivo Excel (.xlsx) vacío con una hoja inicial llamada
+ * 'Productos', usando la librería nativa DocumentFormat.OpenXml
+ * incluida en PIX Studio.
+ * 
+ * Variables de salida:
+ *   ScriptProcessResult : bool    → true si el proceso fue exitoso
+ *   ScriptMessageResult : string  → mensaje del resultado
+ ***************************************************************/
+
+// === CONFIGURACIÓN ===
+string reportsFolder = System.IO.Directory.GetCurrentDirectory() + Config["ReportsFolder"].ToString();
+string rutaExcel = System.IO.Path.Combine(reportsFolder, Config["ExcelReportFileName"] + $"{DateTime.Now.ToString("yyyy-MM-dd")}.xlsx");
+
+// === VARIABLES INTERNAS ===
+bool processSuccess = true;
+string processMessage = "Archivo Excel creado correctamente.";
+
+// === CREACIÓN DEL ARCHIVO EXCEL VACÍO ===
+try
+{
+    // Crear documento Excel
+    var spreadsheet = DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Create(
+        rutaExcel,
+        DocumentFormat.OpenXml.SpreadsheetDocumentType.Workbook
+    );
+
+    // Crear estructura base
+    var workbookPart = spreadsheet.AddWorkbookPart();
+    workbookPart.Workbook = new DocumentFormat.OpenXml.Spreadsheet.Workbook();
+
+    var worksheetPart = workbookPart.AddNewPart&lt;DocumentFormat.OpenXml.Packaging.WorksheetPart&gt;();
+    worksheetPart.Worksheet = new DocumentFormat.OpenXml.Spreadsheet.Worksheet(
+        new DocumentFormat.OpenXml.Spreadsheet.SheetData()
+    );
+
+    // Crear hoja vacía
+    var sheets = spreadsheet.WorkbookPart.Workbook.AppendChild(
+        new DocumentFormat.OpenXml.Spreadsheet.Sheets()
+    );
+
+    var sheet = new DocumentFormat.OpenXml.Spreadsheet.Sheet()
+    {
+        Id = spreadsheet.WorkbookPart.GetIdOfPart(worksheetPart),
+        SheetId = 1,
+        Name = "Productos"
+    };
+    sheets.Append(sheet);
+
+    // Guardar y cerrar
+    workbookPart.Workbook.Save();
+    spreadsheet.Close();
+
+    processMessage = "Archivo Excel vacío creado correctamente en: " + rutaExcel;
+}
+catch (System.Exception ex)
+{
+    processSuccess = false;
+    processMessage = "Error al crear archivo Excel: " + ex.Message;
+}
+
+// === VARIABLES DE SALIDA ===
+ScriptProcessResult = processSuccess;
+ScriptMessageResult = processMessage;
+</_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Script C# - Crear archivo Excel de Reporte</Text>
+            <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i19" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i20" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i21" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>4c433154-2420-43f1-a614-3fe46c0a09cf</Id>
+                    <Parent z:Ref="i20" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i22">
+                        <PropertyName>Text</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>ScriptMessageResult</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId i:nil="true" />
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>4031a14c-5d3e-4b6e-90d5-df447c91cab3</Id>
+                <Parent z:Ref="i19" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i23" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i24" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>9c2a43c1-e150-4fd0-b53f-e11bc3ad36c9</Id>
+                    <Parent z:Ref="i23" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i25">
+                        <PropertyName>Text</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>ScriptMessageResult</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId>0</SelectedOptionId>
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.ThrowException</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>d57a9946-e581-4cf0-914d-8865b891a21d</Id>
+                <Parent z:Ref="i19" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>ec390fc0-756a-41b7-9f4b-9593c3677389</Id>
+            <Parent z:Ref="i16" />
+            <PropertyValues>
+              <PropertyValue z:Id="i26">
+                <PropertyName>Condition</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>ScriptProcessResult</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>IF - Validar Resultado Proceso Script C#</Text>
+            <_activityFullName>BR.Core.Base.If</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>fd164879-128e-4178-bb0e-0a4296848ddf</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Script C# - Crear archivo Excel de Reporte</Text>
+        <_activityFullName>BR.Core.Base.Container</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i27" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i28" i:type="ExecutedStep">
+            <Childs />
+            <Id>3eaa874c-81a0-49bc-b3a0-d19b4504a790</Id>
+            <Parent z:Ref="i27" />
+            <PropertyValues>
+              <PropertyValue z:Id="i29">
+                <PropertyName>CSCode</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">/***************************************************************
+ * SCRIPT: Convertir List&lt;Dictionary&lt;string, object&gt;&gt; a DataTable
+ * AUTOR: Cristian Camilo Gómez Fernández
+ * FECHA: 2025-10-13
+ * 
+ * DESCRIPCIÓN:
+ * Convierte una lista de diccionarios (cada diccionario es un registro)
+ * en un DataTable dinámico. Las llaves del primer diccionario
+ * definen las columnas.
+ * 
+ * Variables de salida:
+ *   dtProductos          : DataTable (resultado convertido)
+ *   ScriptProcessResult  : bool    → true si el proceso fue exitoso
+ *   ScriptMessageResult  : string  → mensaje del resultado
+ ***************************************************************/
+
+// === VARIABLES INTERNAS ===
+bool processSuccess = true;
+string processMessage = "Conversión realizada correctamente.";
+
+// === FUNCIÓN PARA CONVERTIR LISTA A DATATABLE ===
+System.Data.DataTable ConvertirListaADataTable(System.Collections.Generic.List&lt;System.Collections.Generic.Dictionary&lt;string, object&gt;&gt; lista)
+{
+    var dataTable = new System.Data.DataTable();
+
+    if (lista == null || lista.Count == 0)
+        return dataTable;
+
+    // Crear columnas a partir de las llaves del primer diccionario
+    foreach (var key in lista[0].Keys)
+    {
+        dataTable.Columns.Add(key, typeof(object));
+    }
+
+    // Agregar las filas
+    foreach (var dict in lista)
+    {
+        var row = dataTable.NewRow();
+        foreach (var kvp in dict)
+        {
+            row[kvp.Key] = kvp.Value ?? DBNull.Value;
+        }
+        dataTable.Rows.Add(row);
+    }
+
+    return dataTable;
+}
+
+// === PROCESO PRINCIPAL ===
+try
+{
+    dtProductos = ConvertirListaADataTable(listProducts);
+
+    if (dtProductos == null || dtProductos.Rows.Count == 0)
+    {
+        processSuccess = false;
+        processMessage = "La lista de productos está vacía o no contiene datos válidos.";
+    }
+    else
+    {
+        processSuccess = true;
+        processMessage = "Conversión exitosa. Filas: " + dtProductos.Rows.Count.ToString() +
+                         ", Columnas: " + dtProductos.Columns.Count.ToString() + ".";
+    }
+}
+catch (System.Exception ex)
+{
+    processSuccess = false;
+    processMessage = "Error al convertir lista a DataTable: " + ex.Message;
+}
+
+// === VARIABLES DE SALIDA ===
+ScriptProcessResult = processSuccess;
+ScriptMessageResult = processMessage;
+</_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Script C# - Crear DataTable a partir de listProducts</Text>
+            <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i30" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i31" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i32" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>967bc6c4-5338-4c38-bd55-97773c507457</Id>
+                    <Parent z:Ref="i31" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i33">
+                        <PropertyName>Text</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>ScriptMessageResult</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId i:nil="true" />
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>2d1c3f9c-e1b8-4a7d-8ca3-a0e7e513daa4</Id>
+                <Parent z:Ref="i30" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i34" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i35" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>09b75eab-84f5-47d4-8351-bdc804e262a7</Id>
+                    <Parent z:Ref="i34" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i36">
+                        <PropertyName>Text</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>ScriptMessageResult</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId>0</SelectedOptionId>
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.ThrowException</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>c4ddbf2a-e70d-4e71-a7b6-d7f1ed97b53f</Id>
+                <Parent z:Ref="i30" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>fc0f9120-5e20-453d-9af1-3b02a9fd7b21</Id>
+            <Parent z:Ref="i27" />
+            <PropertyValues>
+              <PropertyValue z:Id="i37">
+                <PropertyName>Condition</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>ScriptProcessResult</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>IF - Validar Resultado Proceso Script C#</Text>
+            <_activityFullName>BR.Core.Base.If</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>5037d5e9-fad4-4e43-86f0-90cd74f520ea</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Script C# - Crear DataTable a partir de listProducts</Text>
+        <_activityFullName>BR.Core.Base.Container</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i38" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i39" i:type="ExecutedStep">
+            <Childs />
+            <Id>9e7af64e-733e-43c7-91de-57eabb09a38a</Id>
+            <Parent z:Ref="i38" />
+            <PropertyValues>
+              <PropertyValue z:Id="i40">
+                <PropertyName>CSCode</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">/***************************************************************
+ * SCRIPT: Calcular métricas de productos desde lista de diccionarios
+ * AUTOR: Cristian Camilo Gómez Fernández
+ * FECHA: 2025-10-13
+ * 
+ * DESCRIPCIÓN:
+ * A partir de una lista de diccionarios que contiene los productos
+ * (campos: id, title, price, category, description),
+ * se calculan las siguientes métricas:
+ * 
+ *  - Total de productos
+ *  - Precio promedio general
+ *  - Precio promedio por categoría
+ *  - Cantidad de productos por categoría
+ * 
+ * Finalmente, se devuelve un DataTable con los resultados agregados.
+ * 
+ * Variables de salida:
+ *   dtResumen            : DataTable (con las métricas)
+ *   ScriptProcessResult  : bool    → true si el proceso fue exitoso
+ *   ScriptMessageResult  : string  → mensaje del resultado
+ ***************************************************************/
+
+// === VARIABLES INTERNAS ===
+bool processSuccess = true;
+string processMessage = "Cálculo de métricas completado correctamente.";
+
+// === FUNCIÓN AUXILIAR PARA CONVERTIR A DOUBLE DE FORMA SEGURA ===
+double GetSafeDouble(object value)
+{
+    try
+    {
+        if (value == null) return 0.0;
+        if (value is double) return (double)value;
+        if (value is float) return (double)(float)value;
+        if (value is int) return Convert.ToDouble(value);
+        return double.Parse(value.ToString(), System.Globalization.CultureInfo.InvariantCulture);
+    }
+    catch
+    {
+        return 0.0;
+    }
+}
+
+// === FUNCIÓN PRINCIPAL ===
+System.Data.DataTable CalcularMetricas(System.Collections.Generic.List&lt;System.Collections.Generic.Dictionary&lt;string, object&gt;&gt; lista)
+{
+    var resumen = new System.Data.DataTable();
+    resumen.Columns.Add("Métrica", typeof(string));
+    resumen.Columns.Add("Valor", typeof(object));
+
+    if (lista == null || lista.Count == 0)
+    {
+        var filaVacia = resumen.NewRow();
+        filaVacia["Métrica"] = "Sin datos";
+        filaVacia["Valor"] = "Lista vacía";
+        resumen.Rows.Add(filaVacia);
+        return resumen;
+    }
+
+    // Variables acumulativas
+    double sumaPrecios = 0.0;
+    int totalProductos = lista.Count;
+
+    // Diccionario para agrupar por categoría
+    var agrupadoCategoria = new System.Collections.Generic.Dictionary&lt;string, System.Collections.Generic.List&lt;double&gt;&gt;();
+
+    foreach (var producto in lista)
+    {
+        string categoria = producto.ContainsKey("category") ? producto["category"].ToString() : "Sin categoría";
+        double precio = producto.ContainsKey("price") ? GetSafeDouble(producto["price"]) : 0.0;
+
+        sumaPrecios += precio;
+
+        if (!agrupadoCategoria.ContainsKey(categoria))
+            agrupadoCategoria[categoria] = new System.Collections.Generic.List&lt;double&gt;();
+
+        agrupadoCategoria[categoria].Add(precio);
+    }
+
+    // Calcular promedio general
+    double promedioGeneral = totalProductos &gt; 0 ? (sumaPrecios / totalProductos) : 0.0;
+
+    // Agregar métricas al DataTable
+    var filaTotal = resumen.NewRow();
+    filaTotal["Métrica"] = "Total de productos";
+    filaTotal["Valor"] = totalProductos;
+    resumen.Rows.Add(filaTotal);
+
+    var filaPromedio = resumen.NewRow();
+    filaPromedio["Métrica"] = "Precio promedio general";
+    filaPromedio["Valor"] = Math.Round(promedioGeneral, 2);
+    resumen.Rows.Add(filaPromedio);
+
+    // Métricas por categoría
+    foreach (var kvp in agrupadoCategoria)
+    {
+        string categoria = kvp.Key;
+        var precios = kvp.Value;
+
+        double promedioCat = precios.Count &gt; 0 ? (System.Linq.Enumerable.Sum(precios) / precios.Count) : 0.0;
+
+        var filaCatProm = resumen.NewRow();
+        filaCatProm["Métrica"] = "Precio promedio (" + categoria + ")";
+        filaCatProm["Valor"] = Math.Round(promedioCat, 2);
+        resumen.Rows.Add(filaCatProm);
+
+        var filaCatCount = resumen.NewRow();
+        filaCatCount["Métrica"] = "Cantidad de productos (" + categoria + ")";
+        filaCatCount["Valor"] = precios.Count;
+        resumen.Rows.Add(filaCatCount);
+    }
+
+    return resumen;
+}
+
+// === PROCESO PRINCIPAL ===
+try
+{
+    dtResumen = CalcularMetricas(listProducts);
+
+    if (dtResumen == null || dtResumen.Rows.Count == 0)
+    {
+        processSuccess = false;
+        processMessage = "No se pudieron calcular métricas: la lista está vacía.";
+    }
+    else
+    {
+        processSuccess = true;
+        processMessage = "Cálculo de métricas completado. Filas: " + dtResumen.Rows.Count.ToString() + ".";
+    }
+}
+catch (System.Exception ex)
+{
+    processSuccess = false;
+    processMessage = "Error en el cálculo de métricas: " + ex.Message;
+}
+
+// === VARIABLES DE SALIDA (solo al final) ===
+ScriptProcessResult = processSuccess;
+ScriptMessageResult = processMessage;
+</_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Script C# - Crear Datable de Métricas</Text>
+            <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i41" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i42" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i43" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>c87824f9-2d39-4823-a094-725504b116e7</Id>
+                    <Parent z:Ref="i42" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i44">
+                        <PropertyName>Text</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>ScriptMessageResult</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId i:nil="true" />
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>a5a2a740-22ec-4666-b5b7-0e3173eefa84</Id>
+                <Parent z:Ref="i41" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i45" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i46" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>3cf6dcf3-3694-48a6-93fb-9f5ccc22ea04</Id>
+                    <Parent z:Ref="i45" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i47">
+                        <PropertyName>Text</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>ScriptMessageResult</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId>0</SelectedOptionId>
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.ThrowException</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>d409b45c-16d4-482c-9203-054379d97421</Id>
+                <Parent z:Ref="i41" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>cda34989-d115-41f5-957a-a12c191e6f00</Id>
+            <Parent z:Ref="i38" />
+            <PropertyValues>
+              <PropertyValue z:Id="i48">
+                <PropertyName>Condition</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>ScriptProcessResult</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>IF - Validar Resultado Proceso Script C#</Text>
+            <_activityFullName>BR.Core.Base.If</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>ba7f3e84-7361-4db3-8af6-78eab53a8ec8</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Script C# - Crear Datable de Métricas</Text>
+        <_activityFullName>BR.Core.Base.Container</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i49" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i50" i:type="ExecutedStep">
+            <Childs />
+            <Id>fbaaac19-7087-4466-8b55-05dc61f48dd0</Id>
+            <Parent z:Ref="i49" />
+            <PropertyValues>
+              <PropertyValue z:Id="i51">
+                <PropertyName>ConsiderDataType</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:boolean">true</_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i52">
+                <PropertyName>SheetName</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>"Productos"</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i53">
+                <PropertyName>FileName</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory() + Config["ReportsFolder"].ToString() + @"\" + Config["ExcelReportFileName"].ToString() + $"{DateTime.Now.ToString("yyyy-MM-dd")}.xlsx")</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i54">
+                <PropertyName>DataTable</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>dtProductos</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i55">
+                <PropertyName>StartingCell</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.Core.CustomProperty" i:type="d9p1:ExcelCellSelector">
+                  <d9p1:_value>A1</d9p1:_value>
+                </_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>Activities.Office.Excel.WriteRange</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i56" i:type="ExecutedStep">
+            <Childs />
+            <Id>8d1f37fc-a127-4a92-96b7-8073e587f1b1</Id>
+            <Parent z:Ref="i49" />
+            <PropertyValues>
+              <PropertyValue z:Id="i57">
+                <PropertyName>SheetName</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>"Resumen"</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i58">
+                <PropertyName>FileName</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory() + Config["ReportsFolder"].ToString() + @"\" + Config["ExcelReportFileName"].ToString() + $"{DateTime.Now.ToString("yyyy-MM-dd")}.xlsx")</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>Activities.Office.Excel.AddSheet</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i59" i:type="ExecutedStep">
+            <Childs />
+            <Id>12cde9f6-2987-409d-bdae-d4dfb0d48868</Id>
+            <Parent z:Ref="i49" />
+            <PropertyValues>
+              <PropertyValue z:Id="i60">
+                <PropertyName>ConsiderDataType</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:boolean">true</_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i61">
+                <PropertyName>SheetName</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>"Resumen"</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i62">
+                <PropertyName>FileName</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory() + Config["ReportsFolder"].ToString() + @"\" + Config["ExcelReportFileName"].ToString() + $"{DateTime.Now.ToString("yyyy-MM-dd")}.xlsx")</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i63">
+                <PropertyName>DataTable</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>dtResumen</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i64">
+                <PropertyName>StartingCell</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.Core.CustomProperty" i:type="d9p1:ExcelCellSelector">
+                  <d9p1:_value>A1</d9p1:_value>
+                </_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>Activities.Office.Excel.WriteRange</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>385019d4-9d01-4a4b-b622-6665f423cd28</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Escribir el Reporte</Text>
+        <_activityFullName>BR.Core.Base.Container</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i65" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i66" i:type="ExecutedStep">
+            <Childs />
+            <Id>9cb72d89-4e10-4b66-aa69-06c4a93418d8</Id>
+            <Parent z:Ref="i65" />
+            <PropertyValues>
+              <PropertyValue z:Id="i67">
+                <PropertyName>CSCode</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">/***************************************************************
+ * SCRIPT: Subir JSON/Excel a OneDrive (con ruta dinámica normalizada)
+ * AUTOR: Cristian Camilo Gómez Fernández
+ * FECHA: 2025-10-13
+ * 
+ * DESCRIPCIÓN:
+ * Sube un archivo local (JSON o Excel) a OneDrive validando 
+ * y creando dinámicamente la estructura completa de carpetas 
+ * configurada en Config["ExcelReportOneDrivePath"].
+ * 
+ * Muestra solo el mensaje final (éxito o error detallado).
+ ***************************************************************/
+
+// =============================
+// CONFIGURACIÓN INICIAL
+// =============================
+string clientId = Config["OneDriveAPPClientID"].ToString();
+string clientSecret = Config["OneDriveAPPClientSecret"].ToString();
+string refreshToken = Config["OneDriveAPPRefreshToken"].ToString();
+string reportsFolder = System.IO.Directory.GetCurrentDirectory() + Config["ReportsFolder"].ToString();
+string graphBase = Config["OneDriveAPIEndpoint"].ToString();
+string remoteFolderPath = Config["ExcelReportOneDrivePath"].ToString(); // Ej: "\RPA\Logs" o "/RPA/Reportes"
+
+// === Normalizar ruta remota ===
+remoteFolderPath = remoteFolderPath
+    .Replace("\\", "/")
+    .Replace("//", "/")
+    .Trim('/');
+
+string fecha = DateTime.Now.ToString("yyyy-MM-dd");
+string fileName = Config["ExcelReportFileName"] + fecha + ".xlsx";
+string localFilePath = System.IO.Path.Combine(reportsFolder, fileName);
+
+// =============================
+// VARIABLES INTERNAS
+// =============================
+bool processSuccess = true;
+string currentAccessToken = "";
+string ResultMessage = "";
+var httpClient = new System.Net.Http.HttpClient();
+
+// =============================
+// FUNCIÓN: Registrar error
+// =============================
+void LogError(string msg)
+{
+    processSuccess = false;
+    ResultMessage = msg;
+}
+
+// =============================
+// FUNCIÓN: Extraer valor JSON simple
+// =============================
+string ExtractJsonValue(string json, string key)
+{
+    try
+    {
+        string searchKey = "\"" + key + "\":\"";
+        int startIndex = json.IndexOf(searchKey);
+        if (startIndex == -1) return null;
+        startIndex += searchKey.Length;
+        int endIndex = json.IndexOf("\"", startIndex);
+        if (endIndex == -1) return null;
+        return json.Substring(startIndex, endIndex - startIndex);
+    }
+    catch { return null; }
+}
+
+// =============================
+// FUNCIÓN: Renovar Access Token
+// =============================
+bool RenewAccessToken()
+{
+    try
+    {
+        var tokenClient = new System.Net.Http.HttpClient();
+        var content = new System.Net.Http.FormUrlEncodedContent(new[]
+        {
+            new KeyValuePair&lt;string, string&gt;("client_id", clientId),
+            new KeyValuePair&lt;string, string&gt;("client_secret", clientSecret),
+            new KeyValuePair&lt;string, string&gt;("refresh_token", refreshToken),
+            new KeyValuePair&lt;string, string&gt;("grant_type", "refresh_token")
+        });
+
+        var response = tokenClient.PostAsync(
+            "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+            content
+        ).Result;
+
+        string result = response.Content.ReadAsStringAsync().Result;
+
+        if (response.IsSuccessStatusCode)
+        {
+            string accessToken = ExtractJsonValue(result, "access_token");
+            if (!string.IsNullOrEmpty(accessToken))
+            {
+                currentAccessToken = accessToken;
+                httpClient.DefaultRequestHeaders.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", currentAccessToken);
+                return true;
+            }
+            else
+            {
+                LogError("No se pudo extraer el access token de la respuesta. Verifique las credenciales. Archivo local: " + localFilePath);
+                return false;
+            }
+        }
+        else
+        {
+            LogError("Error al renovar token (HTTP " + response.StatusCode + "): " + result + ". Archivo local: " + localFilePath);
+            return false;
+        }
+    }
+    catch (Exception ex)
+    {
+        LogError("Excepción en RenewAccessToken: " + ex.Message + ". Archivo local: " + localFilePath);
+        return false;
+    }
+}
+
+// =============================
+// FUNCIÓN: Crear carpetas recursivas
+// =============================
+bool EnsureFullPath(string fullPath)
+{
+    try
+    {
+        string[] folders = fullPath.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+        string currentPath = "";
+
+        foreach (string folder in folders)
+        {
+            string parentPath = currentPath;
+            string checkUrl = string.IsNullOrEmpty(parentPath)
+                ? "https://graph.microsoft.com/v1.0/me/drive/root:/" + folder
+                : "https://graph.microsoft.com/v1.0/me/drive/root:/" + parentPath + "/" + folder;
+
+            var response = httpClient.GetAsync(checkUrl).Result;
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                if (!RenewAccessToken())
+                    return false;
+                response = httpClient.GetAsync(checkUrl).Result;
+            }
+
+            // Crear carpeta si no existe
+            if (!response.IsSuccessStatusCode)
+            {
+                string createUrl = string.IsNullOrEmpty(parentPath)
+                    ? "https://graph.microsoft.com/v1.0/me/drive/root/children"
+                    : "https://graph.microsoft.com/v1.0/me/drive/root:/" + parentPath + ":/children";
+
+                string body = "{\"name\": \"" + folder + "\", \"folder\": {}, \"@microsoft.graph.conflictBehavior\": \"rename\"}";
+                var content = new System.Net.Http.StringContent(body, System.Text.Encoding.UTF8, "application/json");
+                var postResponse = httpClient.PostAsync(createUrl, content).Result;
+
+                if (!postResponse.IsSuccessStatusCode)
+                {
+                    LogError("Error de la API al crear carpeta '" + currentPath + "/" + folder + "' (HTTP " + postResponse.StatusCode + "). Archivo local: " + localFilePath);
+                    return false;
+                }
+            }
+
+            currentPath = string.IsNullOrEmpty(parentPath) ? folder : parentPath + "/" + folder;
+        }
+
+        return true;
+    }
+    catch (Exception ex)
+    {
+        LogError("Excepción en EnsureFullPath: " + ex.Message + ". Archivo local: " + localFilePath);
+        return false;
+    }
+}
+
+// =============================
+// FUNCIÓN: Subir archivo
+// =============================
+bool UploadFile(string localPath, string remotePath)
+{
+    try
+    {
+        if (!System.IO.File.Exists(localPath))
+        {
+            LogError("Archivo local no encontrado: " + localPath);
+            return false;
+        }
+
+        string fileName = System.IO.Path.GetFileName(localPath);
+        string uploadUrl = "https://graph.microsoft.com/v1.0/me/drive/root:/" + remotePath + "/" + fileName + ":/content";
+
+        byte[] fileBytes = System.IO.File.ReadAllBytes(localPath);
+        var content = new System.Net.Http.ByteArrayContent(fileBytes);
+
+        // Detectar MIME automáticamente
+        string extension = System.IO.Path.GetExtension(fileName).ToLower();
+        string mimeType = extension == ".xlsx" ? "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                        : extension == ".json" ? "application/json"
+                        : "application/octet-stream";
+        content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(mimeType);
+
+        var response = httpClient.PutAsync(uploadUrl, content).Result;
+
+        if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+        {
+            if (!RenewAccessToken())
+                return false;
+            response = httpClient.PutAsync(uploadUrl, content).Result;
+        }
+
+        if (!response.IsSuccessStatusCode)
+        {
+            string errorResponse = response.Content.ReadAsStringAsync().Result;
+            LogError("Error de la API al subir archivo (HTTP " + response.StatusCode + "): " + errorResponse + ". Archivo local: " + localFilePath);
+            return false;
+        }
+
+        return true;
+    }
+    catch (Exception ex)
+    {
+        LogError("Excepción en UploadFile: " + ex.Message + ". Archivo local: " + localFilePath);
+        return false;
+    }
+}
+
+// =============================
+// BLOQUE PRINCIPAL
+// =============================
+try
+{
+    if (!RenewAccessToken())
+    {
+        LogError("No se pudo obtener un access token válido. Archivo local: " + localFilePath);
+    }
+    else if (!EnsureFullPath(remoteFolderPath))
+    {
+        LogError("No se pudo crear la estructura de carpetas remota: '" + remoteFolderPath + "'. Archivo local: " + localFilePath);
+    }
+    else if (!UploadFile(localFilePath, remoteFolderPath))
+    {
+        LogError("Error al subir el archivo a OneDrive. Archivo local: " + localFilePath);
+    }
+    else
+    {
+        ResultMessage = "Archivo cargado correctamente en OneDrive: " + remoteFolderPath + "/" + fileName;
+    }
+}
+catch (Exception ex)
+{
+    LogError("Error inesperado en el proceso principal: " + ex.Message + ". Archivo local: " + localFilePath);
+}
+
+// =============================
+// RESULTADOS DE SALIDA
+// =============================
+ScriptProcessResult = processSuccess;
+ScriptMessageResult = ResultMessage;
+</_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Script C# - Guardar JSON en OneDrive</Text>
+            <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i68" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i69" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i70" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>42a4ab3c-4a01-4608-a7db-ed6bd8396fce</Id>
+                    <Parent z:Ref="i69" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i71">
+                        <PropertyName>Text</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>ScriptMessageResult</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId i:nil="true" />
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>f2e380ff-9f4c-41a1-a780-f3bf4cf71e43</Id>
+                <Parent z:Ref="i68" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i72" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i73" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>b89dcb39-9c79-45c4-b7fc-c03b30973f57</Id>
+                    <Parent z:Ref="i72" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i74">
+                        <PropertyName>Text</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>ScriptMessageResult</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId>0</SelectedOptionId>
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.ThrowException</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>043e6051-3750-4f39-b7f3-ef6742c92503</Id>
+                <Parent z:Ref="i68" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>f8b929a8-3353-4898-a1cc-baed5147ce7a</Id>
+            <Parent z:Ref="i65" />
+            <PropertyValues>
+              <PropertyValue z:Id="i75">
+                <PropertyName>Condition</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>ScriptProcessResult</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>IF - Validar Resultado Proceso Script C#</Text>
+            <_activityFullName>BR.Core.Base.If</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>dcf3e8dc-33e4-41a1-a1e2-6a2265d753b1</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Script C# - Guardar JSON en OneDrive</Text>
+        <_activityFullName>BR.Core.Base.Container</_activityFullName>
+      </AbstractStep>
+    </Childs>
+    <Id>72241515-0927-4e54-91b4-6096a82e2b2d</Id>
+    <Parent i:nil="true" />
+    <PropertyValues />
+    <SelectedOptionId i:nil="true" />
+    <AutoCloseMode>None</AutoCloseMode>
+    <EnableStatus>true</EnableStatus>
+    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+    <RetryCount>-1</RetryCount>
+    <Text></Text>
+    <_activityFullName>BR.Core.Base.Container</_activityFullName>
+  </Logic>
+  <Name>CreateAndUploadReport.pix</Name>
+  <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <Params>
+    <Parameter z:Id="i76">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>Config</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
+    </Parameter>
+    <Parameter z:Id="i77">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>listProducts</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
+    </Parameter>
+  </Params>
+  <PlatformVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+    <d2p1:_Build>4</d2p1:_Build>
+    <d2p1:_Major>2</d2p1:_Major>
+    <d2p1:_Minor>27</d2p1:_Minor>
+    <d2p1:_Revision>0</d2p1:_Revision>
+  </PlatformVersion>
+  <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
+  <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params">
+    <d2p1:Variable z:Id="i78">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>boolIsReportsFolderExist</d2p1:Name>
+      <d2p1:TypeString>System.Boolean</d2p1:TypeString>
+    </d2p1:Variable>
+    <d2p1:Variable z:Id="i79">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>dtProductos</d2p1:Name>
+      <d2p1:TypeString>System.Data.DataTable</d2p1:TypeString>
+    </d2p1:Variable>
+    <d2p1:Variable z:Id="i80">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>dtResumen</d2p1:Name>
+      <d2p1:TypeString>System.Data.DataTable</d2p1:TypeString>
+    </d2p1:Variable>
+    <d2p1:Variable z:Id="i81">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>ScriptProcessResult</d2p1:Name>
+      <d2p1:TypeString>System.Boolean</d2p1:TypeString>
+    </d2p1:Variable>
+    <d2p1:Variable z:Id="i82">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>ScriptMessageResult</d2p1:Name>
+      <d2p1:TypeString>System.String</d2p1:TypeString>
+    </d2p1:Variable>
+  </Variables>
+  <Version i:nil="true" />
+</Script>

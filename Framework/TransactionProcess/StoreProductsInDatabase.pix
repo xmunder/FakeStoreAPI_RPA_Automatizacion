@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
+  <CompilationType>CSharp</CompilationType>
+  <Description>Nuevo script vacio.</Description>
+  <Id>c16d9c15-ed90-4071-8bed-595a9797cb60</Id>
+  <Logic z:Id="i2" i:type="ExecutedStep">
+    <Childs>
+      <AbstractStep z:Id="i3" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i4" i:type="ExecutedStep">
+            <Childs />
+            <Id>f5849d09-d0a7-4f03-aff4-d8804802950e</Id>
+            <Parent z:Ref="i3" />
+            <PropertyValues>
+              <PropertyValue z:Id="i5">
+                <PropertyName>CSCode</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">/***************************************************************
+ * SCRIPT: Insertar productos en base Supabase (evitar duplicados)
+ * AUTOR: Cristian Camilo Gómez Fernández
+ * FECHA: 2025-10-13
+ * 
+ * DESCRIPCIÓN:
+ * Inserta los registros de una lista de diccionarios en la tabla
+ * 'productos' de Supabase, evitando duplicados por ID.
+ * 
+ * Compatible con datos que contienen JsonElement.
+ * 
+ * Variables de salida:
+ *   ScriptProcessResult : bool    → true si el proceso fue exitoso
+ *   ScriptMessageResult : string  → mensaje del resultado (errores separados por coma)
+ ***************************************************************/
+
+// === CREDENCIALES SUPABASE DESDE CONFIG ===
+string SUPABASE_URL = Config["SupabaseURL"].ToString();
+string SUPABASE_KEY = Config["SupabaseAnonKey"].ToString();
+string TABLE = Config["SupabaseTable"].ToString();
+
+// === VARIABLES INTERNAS ===
+bool processSuccess = true;
+string processMessage = "Proceso completado exitosamente.";
+var errors = new System.Collections.Generic.List&lt;string&gt;();
+
+// === INICIO DEL PROCESO ===
+System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
+client.DefaultRequestHeaders.Add("apikey", SUPABASE_KEY);
+client.DefaultRequestHeaders.Add("Authorization", "Bearer " + SUPABASE_KEY);
+client.DefaultRequestHeaders.Add("Prefer", "return=representation");
+
+try
+{
+    int totalProcesados = 0;
+    int totalInsertados = 0;
+    int totalDuplicados = 0;
+    int totalErrores = 0;
+
+    foreach (var producto in listProducts) // List&lt;Dictionary&lt;string, object&gt;&gt;
+    {
+        totalProcesados++;
+
+        try
+        {
+            // === Conversión segura de valores ===
+            object rawId = producto["id"];
+            int id = rawId is System.Text.Json.JsonElement jId ? jId.GetInt32() : Convert.ToInt32(rawId);
+
+            object rawTitle = producto.ContainsKey("title") ? producto["title"] : "";
+            string title = rawTitle is System.Text.Json.JsonElement jTitle ? jTitle.GetString() : rawTitle.ToString();
+
+            object rawPrice = producto.ContainsKey("price") ? producto["price"] : 0.0;
+            double price = rawPrice is System.Text.Json.JsonElement jPrice ? jPrice.GetDouble() : Convert.ToDouble(rawPrice);
+
+            object rawCategory = producto.ContainsKey("category") ? producto["category"] : "";
+            string category = rawCategory is System.Text.Json.JsonElement jCat ? jCat.GetString() : rawCategory.ToString();
+
+            object rawDescription = producto.ContainsKey("description") ? producto["description"] : "";
+            string description = rawDescription is System.Text.Json.JsonElement jDesc ? jDesc.GetString() : rawDescription.ToString();
+
+            string fechaInsercion = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            // === Verificar duplicado en Supabase ===
+            string endpointCheck = SUPABASE_URL.TrimEnd('/') + "/rest/v1/" + TABLE + "?id=eq." + id.ToString();
+            System.Net.Http.HttpResponseMessage respCheck = client.GetAsync(endpointCheck).Result;
+            string jsonCheck = respCheck.Content.ReadAsStringAsync().Result;
+
+            if (!respCheck.IsSuccessStatusCode)
+            {
+                errors.Add("Error al verificar ID=" + id + ": " + jsonCheck);
+                totalErrores++;
+                continue;
+            }
+
+            if (jsonCheck.Contains("\"id\""))
+            {
+                totalDuplicados++;
+                continue;
+            }
+
+            // === Insertar producto nuevo ===
+            var data = new System.Collections.Generic.List&lt;System.Collections.Generic.Dictionary&lt;string, object&gt;&gt;();
+            var registro = new System.Collections.Generic.Dictionary&lt;string, object&gt;();
+            registro["id"] = id;
+            registro["title"] = title;
+            registro["price"] = price;
+            registro["category"] = category;
+            registro["description"] = description;
+            registro["fecha_insercion"] = fechaInsercion;
+            data.Add(registro);
+
+            string jsonInsert = System.Text.Json.JsonSerializer.Serialize(data);
+            System.Net.Http.StringContent contenido = new System.Net.Http.StringContent(
+                jsonInsert,
+                System.Text.Encoding.UTF8,
+                "application/json"
+            );
+
+            string endpointInsert = SUPABASE_URL.TrimEnd('/') + "/rest/v1/" + TABLE;
+            System.Net.Http.HttpResponseMessage respInsert = client.PostAsync(endpointInsert, contenido).Result;
+            string jsonResp = respInsert.Content.ReadAsStringAsync().Result;
+
+            if (respInsert.IsSuccessStatusCode)
+            {
+                totalInsertados++;
+            }
+            else
+            {
+                errors.Add("Error al insertar ID=" + id + ": " + jsonResp);
+                totalErrores++;
+            }
+        }
+        catch (System.Exception innerEx)
+        {
+            errors.Add("Error procesando producto: " + innerEx.Message);
+            totalErrores++;
+        }
+    }
+
+    // === Evaluación final ===
+    if (totalInsertados == 0 &amp;&amp; totalErrores &gt; 0)
+    {
+        processSuccess = false;
+        processMessage = "No se insertó ningún producto. Errores: " + string.Join(", ", errors);
+    }
+    else if (totalInsertados &gt; 0 &amp;&amp; totalErrores == 0)
+    {
+        processSuccess = true;
+        processMessage = "Inserción completada exitosamente. Total insertados: " + totalInsertados +
+                         ". Duplicados omitidos: " + totalDuplicados + ".";
+    }
+    else if (totalInsertados &gt; 0 &amp;&amp; totalErrores &gt; 0)
+    {
+        processSuccess = false;
+        processMessage = "Inserción parcial completada. Insertados: " + totalInsertados +
+                         ", Duplicados: " + totalDuplicados +
+                         ", Errores: " + totalErrores + ". Detalles: " + string.Join(", ", errors);
+    }
+    else if (totalInsertados == 0 &amp;&amp; totalErrores == 0)
+    {
+        processSuccess = false;
+        processMessage = "No se insertaron productos nuevos. Todos eran duplicados (" + totalDuplicados + ").";
+    }
+}
+catch (System.Exception ex)
+{
+    processSuccess = false;
+    processMessage = "Error general al insertar productos: " + ex.Message;
+}
+
+// === VARIABLES DE SALIDA ===
+ScriptProcessResult = processSuccess;
+ScriptMessageResult = processMessage;
+</_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Script C# - Insertar productos en base de datos  PostgreSQL usando el servicio de Supabase</Text>
+            <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i6" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i7" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i8" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>dd8542bb-a216-4208-a4b9-5b413a66f22e</Id>
+                    <Parent z:Ref="i7" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i9">
+                        <PropertyName>Text</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>ScriptMessageResult</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId i:nil="true" />
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>17b708d0-d755-416e-aab1-e9dbf012c4b7</Id>
+                <Parent z:Ref="i6" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i10" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i11" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>146a7a52-0203-4333-84e3-ddbc1136003c</Id>
+                    <Parent z:Ref="i10" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i12">
+                        <PropertyName>Level</PropertyName>
+                        <_dataType>Value</_dataType>
+                        <_expression i:nil="true" />
+                        <_screenShotBase64 i:nil="true" />
+                        <_value xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.Core.Base" i:type="d13p1:LogLevel">Warn</_value>
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i13">
+                        <PropertyName>Text</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>ScriptMessageResult</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId i:nil="true" />
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>9e1aa130-9f5c-48ee-a8d4-024a9377ebd4</Id>
+                <Parent z:Ref="i6" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>052609f0-01d8-42ff-88af-9a7b5b80e9b6</Id>
+            <Parent z:Ref="i3" />
+            <PropertyValues>
+              <PropertyValue z:Id="i14">
+                <PropertyName>Condition</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>ScriptProcessResult</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>IF - Validar Resultado Proceso Script C#</Text>
+            <_activityFullName>BR.Core.Base.If</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>71bb269a-60d3-4288-b8e6-04dbc1f59746</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Script C# - Insertar productos en base de datos  PostgreSQL usando el servicio de Supabase</Text>
+        <_activityFullName>BR.Core.Base.Container</_activityFullName>
+      </AbstractStep>
+    </Childs>
+    <Id>a41633d5-4e95-4a48-9c5d-8e07f99c9e7b</Id>
+    <Parent i:nil="true" />
+    <PropertyValues />
+    <SelectedOptionId i:nil="true" />
+    <AutoCloseMode>None</AutoCloseMode>
+    <EnableStatus>true</EnableStatus>
+    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+    <RetryCount>-1</RetryCount>
+    <Text></Text>
+    <_activityFullName>BR.Core.Base.Container</_activityFullName>
+  </Logic>
+  <Name>StoreProductsInDatabase.pix</Name>
+  <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <Params>
+    <Parameter z:Id="i15">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>Config</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
+    </Parameter>
+    <Parameter z:Id="i16">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>listProducts</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
+    </Parameter>
+  </Params>
+  <PlatformVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+    <d2p1:_Build>4</d2p1:_Build>
+    <d2p1:_Major>2</d2p1:_Major>
+    <d2p1:_Minor>27</d2p1:_Minor>
+    <d2p1:_Revision>0</d2p1:_Revision>
+  </PlatformVersion>
+  <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
+  <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params">
+    <d2p1:Variable z:Id="i17">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>ScriptProcessResult</d2p1:Name>
+      <d2p1:TypeString>System.Boolean</d2p1:TypeString>
+    </d2p1:Variable>
+    <d2p1:Variable z:Id="i18">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>ScriptMessageResult</d2p1:Name>
+      <d2p1:TypeString>System.String</d2p1:TypeString>
+    </d2p1:Variable>
+  </Variables>
+  <Version i:nil="true" />
+</Script>
